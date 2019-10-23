@@ -1,60 +1,22 @@
 package org.example;
 
-import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
+import java.time.LocalDateTime;
 
 public class Transaction {
-    private final String date;
+    private String date;
     private String name;
     private String amount;
-    private final String balance;
+    private String balance;
 
-    public Transaction(String date, String name, Double amount, Double balance) {
-        this.date = date;
+    public Transaction(String name, Double amount, Double balance) {
+        this.date = new DateFormatter(LocalDateTime.now()).format();
         this.name = name;
-        this.amount = numberFormater(amount);
-        this.balance = numberFormater(balance);
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public String getBalance() {
-        return balance;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getAmount() {
-        return amount;
-    }
-
-    private String numberFormater(double number) {
-        DecimalFormat df = new DecimalFormat();
-        df.setMaximumFractionDigits(2);
-        df.setMinimumFractionDigits(2);
-
-        DecimalFormatSymbols dfs = new DecimalFormatSymbols();
-        dfs.setCurrencySymbol("€");
-        dfs.setGroupingSeparator(' ');
-        dfs.setDecimalSeparator('.');
-        df.setDecimalFormatSymbols(dfs);
-
-        df.setDecimalFormatSymbols(dfs);
-
-        return df.format(number);
+        this.amount = new NumberFormatter(amount).format();
+        this.balance = new NumberFormatter(balance).format();
     }
 
     @Override
     public String toString() {
-        return "Transaction [" +
-                "date='" + date + '\'' +
-                ", operation='" + name + '\'' +
-                ", amount='" + amount + '\'' +
-                ", balance='" + balance + '\'' +
-                ']';
+        return "Transaction [" + name + " of " + amount + "$ on " + date + ". You have " + balance + "$ left.]";
     }
 }

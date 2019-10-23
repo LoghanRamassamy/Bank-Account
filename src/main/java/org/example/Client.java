@@ -20,7 +20,7 @@ public class Client {
     }
 
     public String getHistory() {
-        return bankAccount.makeHistory();
+        return bankAccount.getHistory();
     }
 
     public void makeWithdrawalOfRemains() {
