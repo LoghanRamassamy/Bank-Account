@@ -75,7 +75,7 @@ public class BankAccountTest {
         String history = bankAccount.makeHistory();
 
         // Then
-        Assertions.assertThat(history).isEqualTo("");
+        Assertions.assertThat(history).isEqualTo("deposit : 100.0");
     }
 
 }
