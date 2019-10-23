@@ -65,4 +65,17 @@ public class BankAccountTest {
         Assertions.assertThat(bankAccount.getBalance()).isEqualTo(0);
     }
 
+    @Test
+    public void add_deposit_to_history_account() {
+        // Given
+        BankAccount bankAccount = new BankAccount(100);
+
+        // When
+        bankAccount.deposit(100);
+        String history = bankAccount.makeHistory();
+
+        // Then
+        Assertions.assertThat(history).isEqualTo("");
+    }
+
 }

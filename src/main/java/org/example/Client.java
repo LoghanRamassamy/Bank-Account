@@ -16,6 +16,14 @@ public class Client {
     }
 
     public void makeWithdrawalOf(double money) {
+        bankAccount.withdrawal(money);
+    }
 
+    public String getHistory() {
+        return bankAccount.makeHistory();
+    }
+
+    public void makeWithdrawalOfRemains() {
+        bankAccount.withdrawalAll();
     }
 }

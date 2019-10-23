@@ -26,4 +26,8 @@ public class BankAccount {
     public void withdrawalAll() {
         setBalance(0);
     }
+
+    public String makeHistory() {
+        return "";
+    }
 }
