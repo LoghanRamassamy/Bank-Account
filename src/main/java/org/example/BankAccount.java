@@ -22,4 +22,8 @@ public class BankAccount {
     public void withdrawal(double money) {
         setBalance(balance - money);
     }
+
+    public void withdrawalAll() {
+        setBalance(0);
+    }
 }

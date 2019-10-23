@@ -25,3 +25,4 @@ hs_err_pid*
 .idea/
 
 *.iml
+/target/test-classes/META-INF/BankAccount.kotlin_module
