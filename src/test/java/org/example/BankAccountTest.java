@@ -93,4 +93,19 @@ public class BankAccountTest {
         Assertions.assertThat(history).isEqualTo("withdrawal : 150.50 withdrawal : 250.50 ");
     }
 
+    @Test
+    public void add_many_transaction_to_history_account() {
+        // Given
+        BankAccount bankAccount = new BankAccount(500);
+
+        // When
+        bankAccount.withdrawal(150.50);
+        bankAccount.deposit(350.50);
+        bankAccount.withdrawalAll();
+        String history = bankAccount.makeHistory();
+
+        // Then
+        Assertions.assertThat(history).isEqualTo("withdrawal : 150.50 deposit : 350.50 withdrawal : 700.00 ");
+    }
+
 }

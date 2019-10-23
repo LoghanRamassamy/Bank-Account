@@ -26,6 +26,7 @@ public class BankAccount {
     }
 
     public void withdrawalAll() {
+        transactions.add(new Transaction("withdrawal", balance));
         balance = 0;
     }
 
