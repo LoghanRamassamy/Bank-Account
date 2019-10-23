@@ -105,7 +105,8 @@ public class BankAccountTest {
         String history = bankAccount.makeHistory();
 
         // Then
-        Assertions.assertThat(history).isEqualTo("withdrawal : 150.50 deposit : 350.50 withdrawal : 700.00 ");
+        String expected = "Transaction [date='10/10/2019', operation='withdrawal', amount='150.50', balance='349.50'] Transaction [date='10/11/2019', operation='deposit', amount='350.50', balance='700.00'] Transaction [date='11/10/2019', operation='withdrawal', amount='700.00', balance='0.00'] ";
+        Assertions.assertThat(history).isEqualTo(expected);
     }
 
 }
