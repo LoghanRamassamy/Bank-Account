@@ -21,6 +21,7 @@ public class BankAccount {
     }
 
     public void withdrawal(double money) {
+        transactions.add(new Transaction("withdrawal", money));
         balance -= money;
     }
 
