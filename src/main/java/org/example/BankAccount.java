@@ -11,11 +11,11 @@ public class BankAccount {
         return balance;
     }
 
-    public void setBalance(int balance) {
+    private void setBalance(int balance) {
         this.balance = balance;
     }
 
     public void deposit(int money) {
-        setBalance(200);
+        setBalance(money + balance);
     }
 }

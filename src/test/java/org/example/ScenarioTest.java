@@ -1,21 +1,11 @@
 package org.example;
 
-import static org.junit.Assert.assertTrue;
-
 import org.assertj.core.api.Assertions;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import javax.security.auth.login.AccountException;
-
-public class AppTest 
+public class ScenarioTest
 {
-
-    @Test
-    public void should_answer_with_true()
-    {
-        assertTrue( true );
-    }
 
     @Test
     @Ignore("WIP")
