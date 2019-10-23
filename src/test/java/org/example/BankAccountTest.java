@@ -6,8 +6,7 @@ import org.junit.Test;
 public class BankAccountTest {
 
     @Test
-    public void add_money_to_account()
-    {
+    public void add_money_to_account() {
         // Given
         BankAccount bankAccount = new BankAccount(100);
 
@@ -19,8 +18,7 @@ public class BankAccountTest {
     }
 
     @Test
-    public void add_money_with_pennies_to_account()
-    {
+    public void add_money_with_pennies_to_account() {
         // Given
         BankAccount bankAccount = new BankAccount(100);
 
@@ -29,6 +27,18 @@ public class BankAccountTest {
 
         // Then
         Assertions.assertThat(bankAccount.getBalance()).isEqualTo(150.50);
+    }
+
+    @Test
+    public void withdraw_money_with_pennies_to_account() {
+        // Given
+        BankAccount bankAccount = new BankAccount(100);
+
+        // When
+        bankAccount.withdrawal(50);
+
+        // Then
+        Assertions.assertThat(bankAccount.getBalance()).isEqualTo(50);
     }
 
 }

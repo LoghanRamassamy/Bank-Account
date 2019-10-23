@@ -19,5 +19,19 @@ public class ScenarioTest
         Assertions.assertThat(loghan.getBalance()).isEqualTo(200);
     }
 
+    @Test
+    @Ignore("WIP")
+    public void bank_client_make_a_withdrawal_from_her_account()
+    {
+        // Given
+        Client karin = new Client(new BankAccount(200));
+
+        // When
+        karin.makeWithdrawalOf(100);
+
+        // Then
+        Assertions.assertThat(karin.getBalance()).isEqualTo(100);
+    }
+
     
 }

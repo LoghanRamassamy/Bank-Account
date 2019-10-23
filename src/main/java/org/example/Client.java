@@ -14,4 +14,8 @@ public class Client {
     public double getBalance() {
         return bankAccount.getBalance();
     }
+
+    public void makeWithdrawalOf(double money) {
+
+    }
 }

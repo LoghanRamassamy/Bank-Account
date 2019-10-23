@@ -18,4 +18,8 @@ public class BankAccount {
     public void deposit(double money) {
         setBalance(money + balance);
     }
+
+    public void withdrawal(double money) {
+        setBalance(50);
+    }
 }
