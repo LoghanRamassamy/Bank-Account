@@ -66,16 +66,17 @@ public class BankAccountTest {
     }
 
     @Test
-    public void add_deposit_to_history_account() {
+    public void add_many_deposit_to_history_account() {
         // Given
         BankAccount bankAccount = new BankAccount(100);
 
         // When
         bankAccount.deposit(100);
+        bankAccount.deposit(150.50);
         String history = bankAccount.makeHistory();
 
         // Then
-        Assertions.assertThat(history).isEqualTo("deposit : 100.0");
+        Assertions.assertThat(history).isEqualTo("deposit : 100.00 deposit : 150.50 ");
     }
 
 }

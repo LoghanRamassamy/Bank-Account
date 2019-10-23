@@ -34,6 +34,7 @@ public class BankAccount {
             result.append(transaction.getName());
             result.append(" : ");
             result.append(transaction.getAmount());
+            result.append(" ");
         }
         return result.toString();
     }
