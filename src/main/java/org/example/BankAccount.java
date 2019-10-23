@@ -16,10 +16,10 @@ public class BankAccount {
     }
 
     public void deposit(double money) {
-        setBalance(money + balance);
+        setBalance(balance + money);
     }
 
     public void withdrawal(double money) {
-        setBalance(50);
+        setBalance(balance - money);
     }
 }
