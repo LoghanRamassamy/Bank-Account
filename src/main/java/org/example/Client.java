@@ -7,10 +7,11 @@ public class Client {
         this.bankAccount = bankAccount;
     }
 
-    public void makeDepositOf(int money) {
+    public void makeDepositOf(double money) {
+        bankAccount.deposit(money);
     }
 
-    public int getBalance() {
-        return 0;
+    public double getBalance() {
+        return bankAccount.getBalance();
     }
 }
