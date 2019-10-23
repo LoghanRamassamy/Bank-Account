@@ -5,17 +5,30 @@ import org.junit.Test;
 
 public class BankAccountTest {
 
-    // Given All
-    public static final BankAccount BANK_ACCOUNT = new BankAccount(100);
-
     @Test
     public void add_money_to_account()
     {
+        // Given
+        BankAccount bankAccount = new BankAccount(100);
+
         // When
-        BANK_ACCOUNT.deposit(100);
+        bankAccount.deposit(100);
 
         // Then
-        Assertions.assertThat(BANK_ACCOUNT.getBalance()).isEqualTo(200);
+        Assertions.assertThat(bankAccount.getBalance()).isEqualTo(200);
+    }
+
+    @Test
+    public void add_money_with_pennies_to_account()
+    {
+        // Given
+        BankAccount bankAccount = new BankAccount(100);
+
+        // When
+        bankAccount.deposit(50.50);
+
+        // Then
+        Assertions.assertThat(bankAccount.getBalance()).isEqualTo(150.50);
     }
 
 }

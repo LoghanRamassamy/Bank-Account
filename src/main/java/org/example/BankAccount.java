@@ -1,21 +1,21 @@
 package org.example;
 
 public class BankAccount {
-    private int balance;
+    private double balance;
 
-    public BankAccount(int balance) {
+    public BankAccount(double balance) {
         this.balance = balance;
     }
 
-    public int getBalance() {
+    public double getBalance() {
         return balance;
     }
 
-    private void setBalance(int balance) {
+    private void setBalance(double balance) {
         this.balance = balance;
     }
 
-    public void deposit(int money) {
+    public void deposit(double money) {
         setBalance(money + balance);
     }
 }
