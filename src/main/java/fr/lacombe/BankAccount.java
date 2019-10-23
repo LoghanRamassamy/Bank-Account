@@ -19,7 +19,7 @@ public class BankAccount {
     }
 
     public void withdrawal(double money) {
-        if(isBalanceBlind(money)) {
+        if(checkBlindBalance(money)) {
             history.add(new Transaction("balance blind", money, balance));
         } else {
             balance -= money;
@@ -32,7 +32,7 @@ public class BankAccount {
         balance = RESET_BALANCE;
     }
 
-    private boolean isBalanceBlind(double money) {
+    private boolean checkBlindBalance(double money) {
         return balance < money;
     }
 
