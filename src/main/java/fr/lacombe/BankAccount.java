@@ -1,4 +1,4 @@
-package org.example;
+package fr.lacombe;
 
 public class BankAccount {
     public static final double RESET_BALANCE = 0.00;

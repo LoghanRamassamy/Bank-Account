@@ -1,4 +1,4 @@
-package org.example;
+package fr.lacombe;
 
 import org.assertj.core.api.Assertions;
 import org.junit.Ignore;

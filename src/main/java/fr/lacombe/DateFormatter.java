@@ -1,4 +1,4 @@
-package org.example;
+package fr.lacombe;
 
 import java.time.LocalDateTime;
 

@@ -1,4 +1,4 @@
-package org.example;
+package fr.lacombe;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package org.example;
+package fr.lacombe;
 
 public class Client {
     private BankAccount bankAccount;

@@ -1,4 +1,4 @@
-package org.example;
+package fr.lacombe;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
